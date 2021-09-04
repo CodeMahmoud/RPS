@@ -1,6 +1,9 @@
+let playerScore = 0;
+let aBotScore = 0;
 
 
-function computerPlay() { //computer generates a random answer.
+//computer generates a random answer.
+function computerPlay() { 
     let getComputerPlay = (Math.floor(Math.random() * 10)) % 3;
     if (getComputerPlay === 0){
         return "rock";
@@ -14,6 +17,7 @@ function computerPlay() { //computer generates a random answer.
 
 };
 
+// a function to determine who is the winner
 function playRound(player,aBot){
     if (player === "rock" && aBot === "paper"){
         return " you lose!";
@@ -33,6 +37,39 @@ function playRound(player,aBot){
 
 };
 
-const player = "rock";
+
+// function for Score Board (WIP)
+function game(){
+    
+        if (player === "rock" && aBot === "paper"){
+            return ++playerScore;
+            return playerScore += 0;
+        }
+        else if (player === "rock" && aBot === "scissors"){
+            return ++playerScore;
+            return playerScore += 0;
+        }
+        else if (player === "paper" && aBot === "scissors"){
+            return ++playerScore;
+            return playerScore += 0;
+        }
+        else if (player === "paper" && aBot === "rock"){
+            return ++playerScore;
+            return playerScore += 0;
+        }
+        else {
+            return (playerScore, aBotScore)
+        }
+       
+    
+    
+
+};
+
+const player = window.prompt("Enter rock, paper or scissors");
 const aBot = computerPlay();
 console.log(playRound(player, aBot));
+console.log(game(player, aBot));
+
+// playerscore-- and bot++
+// playerscore++ and bot++
